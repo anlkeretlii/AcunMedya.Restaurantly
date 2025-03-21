@@ -26,6 +26,7 @@ Bu proje, **.NET MVC** kullanılarak geliştirilmiş orta seviye bir restoran ta
 
 
 <h3>Ana Sayfa</h3>
+
 ![image](https://github.com/user-attachments/assets/8b0569b1-2f15-4f1a-a6be-eb4ea42d1457)
 ![image](https://github.com/user-attachments/assets/34010e01-cd1a-444c-9a65-221a617f4a15)
 ![image](https://github.com/user-attachments/assets/f050ce5a-4fc5-4d7a-b012-af8ec6c866f1)
@@ -43,4 +44,5 @@ Bu proje, **.NET MVC** kullanılarak geliştirilmiş orta seviye bir restoran ta
 
 
 <h3>Veri Tabanı</h3>
-![image](https://github.com/user-attachments/assets/91a13116-3e98-41c6-9a9a-88d9d05e0810)
+
+![425536007-b305f4b0-2c7b-4303-a609-13b6e6c8475f](https://github.com/user-attachments/assets/49250883-94fc-4ae5-bbb6-50289b6bdda5)
