@@ -16,10 +16,10 @@ Bu proje, **.NET MVC** kullanılarak geliştirilmiş orta seviye bir restoran ta
   - Kullanıcıların rezervasyon yapmasını ve mesaj göndermesini sağlar.  
 
 ## 🛠 Kullanılan Teknolojiler  
-- **ASP.NET MVC** (Model-View-Controller)  
-- **Entity Framework 6.0** (ORM)  
+- **ASP.NET MVC** 
+- **Entity Framework 6.5**  
 - **Code First Yaklaşımı**  
-- **Microsoft SQL Server (MSSQL)**  
+- **Microsoft SQL Server**  
 - **HTML, CSS, Bootstrap**  
 - **JavaScript**  
 - **LINQ**  
