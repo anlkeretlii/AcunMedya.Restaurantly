@@ -1,0 +1,20 @@
+@model List<AcunMedya.Restaurantly.Entities.Contact>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.Subject</td>
+        <td>@item.SendDate.ToString("dd.MM.yyyy HH:mm")</td>
+        <td>
+            @if (item.IsRead)
+            {
+                <span class="badge badge-success">Okundu</span>
+            }
+            else
+            {
+                <span class="badge badge-warning">Okunmadı</span>
+            }
+        </td>
+    </tr>
+} 

@@ -1,0 +1,35 @@
+@model List<AcunMedya.Restaurantly.Entities.Event>
+
+<section id="events" class="events">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Events</h2>
+            <p>Organize Your Events in our Restaurant</p>
+        </div>
+
+        <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+                @foreach (var item in Model)
+                {
+                    <div class="swiper-slide">
+                        <div class="row event-item">
+                            <div class="col-lg-6">
+                                <img src="@item.ImageUrl" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-lg-6 pt-4 pt-lg-0 content">
+                                <h3>@item.Title</h3>
+                                <div class="price">
+                                    <p><span>$@item.Price</span></p>
+                                </div>
+                                <p class="fst-italic">
+                                    @item.Description
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section> 

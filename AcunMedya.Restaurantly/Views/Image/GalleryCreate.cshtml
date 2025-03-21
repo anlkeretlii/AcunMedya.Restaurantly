@@ -1,0 +1,31 @@
+﻿@model AcunMedya.Restaurantly.Entities.Images
+@{
+    ViewBag.Title = "Galeri Ekle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Yeni Galeri Görseli Ekle</h4>
+                    @using (Html.BeginForm("GalleryCreate", "Gallery", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <div class="form-group">
+                            <label>Görsel</label>
+                            <input type="file" name="ImageFile" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Başlık</label>
+                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a href="/Gallery/GalleryList" class="btn btn-outline-secondary">İptal</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

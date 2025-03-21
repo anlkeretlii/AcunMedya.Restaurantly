@@ -1,0 +1,38 @@
+@model AcunMedya.Restaurantly.Entities.Event
+@{
+    ViewBag.Title = "Create Event";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Yeni Etkinlik Ekle</h4>
+                    @using (Html.BeginForm("AddEvent", "Event", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <div class="form-group">
+                            <label>Görsel</label>
+                            <input type="file" name="ImageFile" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Başlık</label>
+                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label>Fiyat</label>
+                            @Html.TextBoxFor(x => x.Price, new { @class = "form-control", type = "number", step = "0.01" })
+                        </div>
+                        <div class="form-group">
+                            <label>Açıklama</label>
+                            @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a href="/Event/Index" class="btn btn-outline-secondary">İptal</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

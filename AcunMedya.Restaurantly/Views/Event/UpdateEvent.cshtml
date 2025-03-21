@@ -1,0 +1,45 @@
+@model AcunMedya.Restaurantly.Entities.Event
+@{
+    ViewBag.Title = "Update Event";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Etkinlik Güncelle</h4>
+                    @using (Html.BeginForm("UpdateEvent", "Event", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.HiddenFor(x => x.EventId)
+                        @Html.HiddenFor(x => x.ImageUrl)
+                        
+                        <div class="form-group">
+                            <label>Mevcut Görsel</label>
+                            <div>
+                                <img src="@Model.ImageUrl" alt="@Model.Title" style="max-width: 200px; margin: 10px 0;" />
+                            </div>
+                            <label>Yeni Görsel (Değiştirmek istemiyorsanız boş bırakın)</label>
+                            <input type="file" name="ImageFile" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Başlık</label>
+                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label>Fiyat</label>
+                            @Html.TextBoxFor(x => x.Price, new { @class = "form-control", type = "number", step = "0.01" })
+                        </div>
+                        <div class="form-group">
+                            <label>Açıklama</label>
+                            @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+                        </div>
+                        <button type="submit" class="btn btn-primary">Güncelle</button>
+                        <a href="/Event/Index" class="btn btn-outline-secondary">İptal</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

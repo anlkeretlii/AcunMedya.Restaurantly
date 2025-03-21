@@ -1,0 +1,48 @@
+﻿@model AcunMedya.Restaurantly.Entities.Chef
+@{
+    ViewBag.Title = "Update Chef";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Anasayfa</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Kategori Update</a></li>
+        </ol>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Şefi Düzenle</h4>
+                <div class="basic-form">
+                    <form method="post">
+
+                        <div class="form-group">
+
+                            <input type="hidden" name="ChefId" value="@Model.ChefId" />
+                            <br />
+                            <label>İsim</label>
+
+                            <input type="text" class="form-control" name="Name" value="@Model.Name" placeholder="Bir Şef Adı Yazınız">
+                            <br />
+                            <label>Ünvan</label>
+                            <input type="text" class="form-control" name="Title" value="@Model.Title" placeholder="Bir Şef Rütbesi Yazınız">
+                            <br />
+                            <label>Resim Url</label>
+                            <input type="text" class="form-control" name="ImageUrl" value="@Model.ImageUrl" placeholder="Şef Resmi Ekleyin">
+                        </div>
+
+                        <button type="submit" class="btn btn-dark">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

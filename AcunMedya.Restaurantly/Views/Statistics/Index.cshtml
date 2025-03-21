@@ -1,0 +1,101 @@
+@{
+    ViewBag.Title = "İstatistikler";
+      Layout = "~/Views/AdminLayout/Index.cshtml";
+
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-1">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Toplam Kategori</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white">@ViewBag.categoryCount</h2>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-list"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-2">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Toplam Ürün</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white">@ViewBag.productCount</h2>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-3">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Aktif Rezervasyon</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white">@ViewBag.activeReservationCount</h2>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-calendar"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-4">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Toplam Şef</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white">@ViewBag.chefCount</h2>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-user-circle"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-5">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Toplam Mesaj</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white">@ViewBag.messageCount</h2>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-envelope"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-6">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Toplam Yorum</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white">@ViewBag.testimonialCount</h2>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-comments"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-7">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Toplam Blog</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white">@ViewBag.blogCount</h2>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-newspaper-o"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-8">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Toplam Personel</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white">@ViewBag.staffCount</h2>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-users"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

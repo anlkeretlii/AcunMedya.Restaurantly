@@ -1,0 +1,34 @@
+@model AcunMedya.Restaurantly.Entities.Feature
+@{
+    ViewBag.Title = "Create Feature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Yeni Özellik Ekle</h4>
+                    @using (Html.BeginForm("AddFeature", "Feature", FormMethod.Post))
+                    {
+                        <div class="form-group">
+                            <label>İkon (Font Awesome Class)</label>
+                            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label>Başlık</label>
+                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label>Açıklama</label>
+                            @Html.TextAreaFor(x => x.SubTitle, new { @class = "form-control" })
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a href="/Feature/Index" class="btn btn-outline-secondary">İptal</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

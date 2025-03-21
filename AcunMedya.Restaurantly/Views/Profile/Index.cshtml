@@ -1,0 +1,100 @@
+@model AcunMedya.Restaurantly.Entities.Admin
+@{
+    ViewBag.Title = "Profil";
+       Layout = "~/Views/AdminLayout/Index.cshtml";
+
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-xlg-3 col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <center class="m-t-30">
+                        <img src="@Model.ImageUrl" class="rounded-circle" width="150" />
+                        <h4 class="card-title m-t-10">@Model.Name @Model.Surname</h4>
+                        <h6 class="card-subtitle">@Model.Title</h6>
+                    </center>
+                </div>
+                <div>
+                    <hr>
+                </div>
+                <div class="card-body">
+                    <small class="text-muted">E-posta </small>
+                    <h6>@Model.Email</h6>
+                    <small class="text-muted p-t-30 db">Telefon</small>
+                    <h6>@Model.Phone</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-xlg-9 col-md-7">
+            <div class="card">
+                <div class="card-body">
+                    <form class="form-horizontal form-material" action="/Profile/UpdateProfile" method="post" enctype="multipart/form-data">
+                        @Html.HiddenFor(x => x.AdminId)
+                        <div class="form-group">
+                            <label class="col-md-12">Ad</label>
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(x => x.Name, new { @class = "form-control form-control-line" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12">Soyad</label>
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(x => x.Surname, new { @class = "form-control form-control-line" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12">Unvan</label>
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(x => x.Title, new { @class = "form-control form-control-line" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12">Aciklama</label>
+                            <div class="col-md-12">
+                                @Html.TextAreaFor(x => x.Description, new { @class = "form-control form-control-line", rows = "5" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12">Kullanici Adi</label>
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(x => x.UserName, new { @class = "form-control form-control-line" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12">E-posta</label>
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(x => x.Email, new { @class = "form-control form-control-line", type = "email" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12">Telefon</label>
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(x => x.Phone, new { @class = "form-control form-control-line" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12">Sifre</label>
+                            <div class="col-md-12">
+                                @Html.PasswordFor(x => x.Password, new { @class = "form-control form-control-line" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12">Profil Resmi</label>
+                            <div class="col-md-12">
+                                <input type="file" name="ImageFile" class="form-control form-control-line" />
+                                @Html.HiddenFor(x => x.ImageUrl)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-success">Güncelle</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
