@@ -1,6 +1,6 @@
 # AcunMedya.Restaurant
 
-# Restoran Tanıtım Sayfası (.NET MVC)
+# Restoran Sitesi(.NET MVC)
 
 **Acun Medya Akademi'de Murat Yücedağ koordinatörlüğünde, Busenur Demirbaş tarafından verilen "C# ile Programlamaya Giriş" eğitimi kapsamında geliştirilen 2. proje.**
 
